@@ -10,15 +10,15 @@ void lexer_init(const char *source) {
     current_pos = 0;
 }
 
-static char current_char() {
+static char current_char(void) {
     return source_code[current_pos];
 }
 
-static void advance() {
+static void advance(void) {
     current_pos++;
 }
 
-Token lexer_next_token() {
+Token lexer_next_token(void) {
     Token token;
     token.type = TOKEN_UNKNOWN;
     size_t text_pos = 0;
